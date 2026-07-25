@@ -2,6 +2,8 @@ from rich.console import Console
 from ai.router import route_command
 from ai.brain import start_brain
 from time import sleep
+from speech.listener import listen
+from ai.nlu import detect_intent
 
 console = Console()
 
@@ -30,7 +32,9 @@ class Assistant:
         console.print("[bold cyan]ASTRA AI is Ready![/bold cyan]")
         
         while True:
-            command = input("\nYou:")
-            if command.lower() == "exit":
-                break
+            command = listen()
+            if not command:
+                continue
+            intent = detect_intent(command)
+            
             route_command(command)
