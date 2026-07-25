@@ -1,6 +1,7 @@
 from automation.apps import open_edge
 from automation.browse import open_website, google_search
 from automation.files import open_folder, open_file, create_folder
+from automation.apps import(open_notepad, open_calculator, open_cmd, open_vscode, open_chrome)
 
 def execute_command(command):
     command = command.lower()
@@ -22,5 +23,15 @@ def execute_command(command):
     elif "create folder" in command:
         path = command.replace("create folder", "").strip()
         print(create_folder(path))
+    elif "open notepad" in command:
+        print(open_notepad())
+    elif "open calculator" in command:
+        print(open_calculator())
+    elif "open cmd" in command:
+        print(open_cmd())
+    elif "open vscode" in command or "open vs code" in command:
+        print(open_vscode())
+    elif "open chrome" in command:
+        print(open_chrome())
     else:
         print("Command not found")
