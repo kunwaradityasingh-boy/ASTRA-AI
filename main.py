@@ -1,6 +1,9 @@
-from rich.console import Console
+from ai.assistant import Assistant
 
-console = Console()
+assistant = Assistant()
 
-console.print("[bold cyan]Welcome to ASTRA AI[/bold cyan]")
-console.print("[green]AI Assistant Development Started Successfully[/green]")
+def main():
+    assistant.start()
+    
+if __name__ == "__main__":
+    main()
