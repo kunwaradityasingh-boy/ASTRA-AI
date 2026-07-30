@@ -27,6 +27,43 @@ def detect_intent(command):
             "virtual studio code kholo",
             "vscode kholo",
             "vs code khol do"
+        ],
+        
+        "OPEN_GITHUB": [
+            "open github",
+            "github kholo",
+            "github chalao",
+            "github khol do",
+            "github open karo"
+        ],
+        
+        "OPEN_YOUTUBE": [
+            "open youtube",
+            "youtube kholo",
+            "youtube chalao",
+            "youtube khol do",
+            "youtube open karo"
+        ],
+        
+        "OPEN_GOOGLE": [
+            "open google",
+            "google kholo",
+            "google chalao",
+            "google khol do",
+            "google open karo"
+        ],
+        
+        "EXIT": [
+            "exit",
+            "stop",
+            "quit",
+            "close",
+            "goodbye",
+            "bye",
+            "stop listening",
+            "band ho jao",
+            "band karo",
+            "exit karo"
         ]
     }
     

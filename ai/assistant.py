@@ -36,5 +36,10 @@ class Assistant:
             if not command:
                 continue
             intent = detect_intent(command)
+            print(f"Detected Intent: {intent}")
             
+            if intent == "EXIT":
+                console.print("[red]Goodbye! ASTRA AI Stopped.[/red]")
+                break
+
             route_command(command)

@@ -1,9 +1,8 @@
-from ai.assistant import Assistant
-
-assistant = Assistant()
+from astra.core.engine import AstraEngine
 
 def main():
-    assistant.start()
+    engine = AstraEngine()
+    engine.run()
     
 if __name__ == "__main__":
     main()

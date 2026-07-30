@@ -15,6 +15,17 @@ def route_command(command):
         execute_command("open notepad")
     elif intent == "OPEN_VSCODE":
         execute_command("open vscode")
+    elif intent == "OPEN_GITHUB":
+        execute_command("open github")
+    elif intent == "OPEN_YOUTUBE":
+        execute_command("open youtube")
+    elif intent == "OPEN_GOOGLE":
+        execute_command("open google")
+    elif intent == "EXIT":
+        console.print("[red]Goodbye! ASTRA AI Stopped.[/red]")
+        raise SystemExit
+    else:
+        console.print("[yellow]Routing to AI Brain[/Yellow]")
     
     if "edge" in command.lower():
         console.print("[green]Routing to Automation Module[/green]")
@@ -22,5 +33,3 @@ def route_command(command):
         console.print("[green]Routing to Memory Module[/green]")
     else:
         console.print("[yellow]Routing to AI Brain[/yellow]")
-        
-    execute_command(command)

@@ -31,6 +31,12 @@ def execute_command(command):
         print(open_cmd())
     elif "open vscode" in command or "open vs code" in command:
         print(open_vscode())
+    elif "open github" in command:
+        print(open_website("github.com"))
+    elif "open youtube" in command:
+        print(open_website("youtube.com"))
+    elif "open google" in command:
+        print(open_website("google.com"))
     elif "open chrome" in command:
         print(open_chrome())
     else:
