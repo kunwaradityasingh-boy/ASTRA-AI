@@ -24,8 +24,6 @@ def route_command(command):
     elif intent == "EXIT":
         console.print("[red]Goodbye! ASTRA AI Stopped.[/red]")
         raise SystemExit
-    else:
-        console.print("[yellow]Routing to AI Brain[/Yellow]")
     
     if "edge" in command.lower():
         console.print("[green]Routing to Automation Module[/green]")
