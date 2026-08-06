@@ -1,6 +1,8 @@
 from rich.console import Console
 from ai.commands import execute_command
 from ai.nlu import detect_intent
+from ai.brain import ask_brain
+from speech.speaker import speak
 
 console = Console()
 
@@ -31,3 +33,6 @@ def route_command(command):
         console.print("[green]Routing to Memory Module[/green]")
     else:
         console.print("[yellow]Routing to AI Brain[/yellow]")
+        response = ask_brain(command)
+        
+    speak(response)
