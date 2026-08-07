@@ -34,5 +34,6 @@ def route_command(command):
     else:
         console.print("[yellow]Routing to AI Brain[/yellow]")
         response = ask_brain(command)
-        
-    speak(response)
+        console.print(response)
+        speak(response)
+        return response
