@@ -53,6 +53,14 @@ def detect_intent(command):
             "google open karo"
         ],
         
+        "OPEN_WHATSAPP": [
+            "open whatsapp",
+            "whatsapp kholo",
+            "whatsapp chalao",
+            "whatsapp khol do",
+            "whatsapp open karo"
+        ],
+        
         "EXIT": [
             "exit",
             "stop",

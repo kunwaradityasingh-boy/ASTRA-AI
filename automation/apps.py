@@ -26,3 +26,6 @@ def open_cmd():
 def open_vscode():
     os.system("code")
     return "Visual Studio Code Opened Successfully"
+def open_whatsapp():
+    os.startfile("https://web.whatsapp.com")
+    return "WhatsApp Opened Successfully"

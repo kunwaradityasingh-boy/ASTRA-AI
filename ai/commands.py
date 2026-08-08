@@ -1,16 +1,25 @@
 from automation.apps import open_edge
 from automation.browse import open_website, google_search
 from automation.files import open_folder, open_file, create_folder
-from automation.apps import(open_notepad, open_calculator, open_cmd, open_vscode, open_chrome)
+from automation.apps import(open_notepad, open_calculator, open_cmd, open_vscode, open_chrome, open_whatsapp)
+import webbrowser
+import subprocess
+import os
+print("*******COMMANDS.PY LOADED********")
+def open_any_website(command):
+    site = command.replace("open", "").strip().replace("", "")
+    
+    if "." not in site:
+        site += ".com"
+    webbrowser.open(f"https://{site}")
+    return f"Opened {site}"
 
 def execute_command(command):
+    print("COMMAND RECEIVED =", repr(command))
     command = command.lower()
     
     if "open edge" in command:
         print(open_edge())
-    elif "google" in command:
-        query = command.replace("google", "").strip()
-        print(google_search(query))
     elif "open website" in command:
         url = command.replace("open website", "").strip()
         print(open_website(url))
@@ -36,8 +45,22 @@ def execute_command(command):
     elif "open youtube" in command:
         print(open_website("youtube.com"))
     elif "open google" in command:
+        print("OPEN GOOGLE BLOCK")
         print(open_website("google.com"))
+        return
+    elif "google" in command:
+        print("OPEN GOOGLE BLOCK")
+        query = command.replace("google", "",1).strip()
+        
+        if query:
+            print(google_search(query))
+        else:
+            print(open_website("google.com"))
     elif "open chrome" in command:
         print(open_chrome())
+    elif "open whatsapp" in command:
+        print(open_whatsapp())
+    elif command.startswith("open "):
+        print(open_any_website(command))
     else:
         print("Command not found")

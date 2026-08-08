@@ -42,4 +42,7 @@ class Assistant:
                 console.print("[red]Goodbye! ASTRA AI Stopped.[/red]")
                 break
 
-            route_command(command)
+            result = route_command(command)
+            
+            if result is not None:
+                continue
